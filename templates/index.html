@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='ECAI.ico') }}">  <!-- ADD THIS LINE -->
+</head>
+<body>
+    <div class="container">
+        <h1>Comic Generator</h1>
+        <form action="{{ url_for('generate_comic') }}" method="post">
+            <div class="form-group">
+                <label for="text">Comic Text:</label>
+                <textarea class="form-control" id="text" name="text" rows="5" placeholder="Enter text for the comic"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Comic</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
